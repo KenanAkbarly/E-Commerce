@@ -6,7 +6,7 @@ import User from "./User"
 
 const Navbar = () => {
   return (
-    <div className="flex items-center justify-between gap-3 px-3 md:gap-10 md:px-10 h-16 text-black border-b-[1px] border-black">
+    <div className="flex items-center justify-between gap-3 px-4 py-8 md:gap-10 md:px-10 h-16 text-black border-b-[1px] border-black">
         <Logo />
         <Search />
         <CardCount/>
