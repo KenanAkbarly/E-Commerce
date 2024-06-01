@@ -5,11 +5,9 @@ type DetailProps = {
     productId:string
 }
 const Detail = ({params}:{params:DetailProps}) => {
-  console.log(params,'kenan');
   
 const {productId} = params
 const product = products.find((product)=> product.id == productId)
-console.log(product,'products');
 
   return (
     <div>

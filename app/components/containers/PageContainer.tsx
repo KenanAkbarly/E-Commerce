@@ -2,7 +2,7 @@ import React from 'react'
 
 const PageContainer = ({children}:{children:React.ReactNode}) => {
   return (
-    <div className='px-3 md:px-10'>
+    <div className='container mx-auto px-4'>
         {children}
     </div>
   )
