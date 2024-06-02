@@ -1,4 +1,5 @@
 'use client'
+import { Rating } from "@/node_modules/@mui/material/index";
 import Avatar from "../general/Avatar";
 const Comment = ({prod}:{prod:any}) => {
   
@@ -9,6 +10,8 @@ const Comment = ({prod}:{prod:any}) => {
       <div>
       <p>{prod?.user?.name}</p>
       <p className="text-[13px] text-gray-500">{prod?.createdDate.slice(0,10)}</p>
+      <Rating name="read-only" size='small' value={prod?.rating} readOnly /> 
+
       </div>
       </div>
       <p className="px-4 py-3 text-slate-500 text-sm md:text-base"> 

@@ -51,7 +51,7 @@ const DetailClient = ({product}:{product:any}) => {
               
               <p className="text-xl md:text-2xl">{product?.name}</p>
               <div className="flex items-center gap-3">
-                <Rating name="read-only" value={productRating} readOnly /> <span className="text-md">{productRating}</span>
+                <Rating name="read-only" value={productRating} readOnly /> <span className="text-md">{isNaN(productRating)? 0: productRating}</span>
               </div>
 
               <p className="text-slate-500">{product?.description}</p>
@@ -69,10 +69,10 @@ const DetailClient = ({product}:{product:any}) => {
             </div>
           </div>
           <div className="border rounded-md bg-white drop-shadow-sm p-4 mt-5">
-          <Heading text="Commentler"/>
+            <div className="flex">  <Heading text="Commentler" center={false}/> <p className="font-semibold text-slate-900 px-3 md:py-8 md:text-2xl">({product?.reviews.length})</p></div>
             {
               product?.reviews?.map((prod:any)=>(
-                <Comments key={prod.id} prod={prod}/>
+                <Comments key={prod.id} prod={prod} />
               ))
             }
           </div>
